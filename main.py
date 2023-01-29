@@ -1,49 +1,28 @@
 
-name1 = input("Name? ").lower()
-name2 = input("Second name? ").lower()
+name1 = input("Name? ")
+name2 = input("Second name? ")
 total = 0
 
+combined_names = name1 + name2
+lower_names = combined_names.lower()
 
-if name1.count('t') > 0:
-    total +=10
-if name1.count('r') > 0:
-    total += 10
-if name1.count('u') > 0:
-    total += 10
-if name1.count('e') > 0:
-    total += 10
+t = lower_names.count("t")
+r = lower_names.count("r")
+u = lower_names.count("u")
+e = lower_names.count("e")
+first_digit = t + r + u + e
 
-if name2.count('t') > 0:
-    total +=10
-if name2.count('r') > 0:
-    total += 10
-if name2.count('u') > 0:
-    total += 10
-if name2.count('e') > 0:
-    total += 10
+l = lower_names.count("l")
+o = lower_names.count("o")
+v = lower_names.count("v")
+e = lower_names.count("e")
+second_digit = l + o + v + e
 
-if name1.count('l') > 0:
-    total +=1
-if name1.count('o') > 0:
-    total += 1
-if name1.count('v') > 0:
-    total += 1
-if name1.count('e') > 0:
-    total += 1
+score = int(str(first_digit) + str(second_digit))
 
-if name2.count('l') > 0:
-    total +=1
-if name2.count('o') > 0:
-    total += 1
-if name2.count('v') > 0:
-    total += 1
-if name2.count('e') > 0:
-    total += 1
+print(f"Your score is {score}.")
 
-love_score = total
-print(f"Your score is {love_score}.")
-
-if 10 < love_score > 90:
-    print(f"Your score is {love_score} you go together like coke and mentos")
-if 40 <= love_score <= 50:
-    print(f"Your score is {love_score}, you are alright together.")
+if 10 < score > 90:
+    print(f"Your score is {score} you go together like coke and mentos")
+if 40 <= score <= 50:
+    print(f"Your score is {score}, you are alright together.")
